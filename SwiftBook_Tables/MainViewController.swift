@@ -10,7 +10,7 @@ import UIKit
 
 class MainViewController: UITableViewController {
 
-    let lovelyPlaces = ["Paul", "Bistro Delux", "Animal Farm", "LIDO", "Victory Park"]
+    let lovelyPlaces = ["Bonsai", "Burger Heroes", "Kitchen", "Love&Life", "Morris Pub", "Sherlock Holmes", "Speak Easy", "X.O", "Балкан Гриль", "Бочка", "Вкусные истории", "Дастархан", "Индокитай", "Классик", "Шок"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +31,16 @@ class MainViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = lovelyPlaces[indexPath.row]
+        cell.imageView?.image = UIImage(named: lovelyPlaces[indexPath.row])
 
+        cell.imageView?.layer.cornerRadius = cell.frame.size.height / 2
+        cell.imageView?.clipsToBounds = true
         return cell
+    }
+    
+    //MARK: - Table View Delegate
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 58
     }
     /*
     // MARK: - Navigation

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--My Places-->
         <scene sceneID="7FH-Vy-qJx">
             <objects>
                 <tableViewController id="uvk-9d-G3Q" customClass="MainViewController" customModule="SwiftBook_Tables" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                             <outlet property="delegate" destination="uvk-9d-G3Q" id="kad-Yr-ta7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="c2b-5c-SSH"/>
+                    <navigationItem key="navigationItem" title="My Places" id="c2b-5c-SSH"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckf-r5-QgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,6 +45,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V0d-NM-EPm">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="24"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="uvk-9d-G3Q" kind="relationship" relationship="rootViewController" id="fl7-QC-uNw"/>
